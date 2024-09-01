@@ -1,0 +1,30 @@
+
+table Component {
+  id: string;
+  type: string;
+  content: string;
+  label: string;
+  children: [Component];
+  font: string;
+  fontSize: float;
+  foregroundColor: string;
+  isHidden: bool;
+  action: string;
+}
+
+table Screen {
+  name: string;
+  url: string;
+  state: string (deprecated);
+  components: [Component];
+  backgroundColor: string;
+  isTransparent: bool;
+  blurEffect: string;
+  backgroundImage: string;
+}
+
+table Binarys {
+  screens: [Screen];
+}
+
+root_type Binarys;
